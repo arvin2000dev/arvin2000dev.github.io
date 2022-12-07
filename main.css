@@ -1,68 +1,24 @@
-:root {
-  font-size: 14px;
-}
-@media (min-width: 350px) {
-  :root {
-    font-size: 16px;
-  }
-}
-@media (min-width: 640px) {
-  :root {
-    font-size: 28px;
-  }
-}
-@media (min-width: 1440px) {
-  :root {
-    font-size: 1.25vw;
-  }
-}
-
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
-section {
-  position: relative;
-  z-index: 1;
-  max-width: 19rem;
+body {
+  background-color: rgb(31, 31, 31);
 }
 
-/* Logo */
-
-.logo {
-  opacity: 0;
-  position: relative;
-  margin-left: -3.5rem;
-  margin-top: -8rem;
-  margin-bottom: 0.75rem;
-  font-size: 8px;
-}
-
-body.ready .logo {
-  opacity: 1;
-}
-
-body:not(.iOS) #lines * {
-  mix-blend-mode: lighten;
-}
-
-#fills * {
-  opacity: 0;
-  mix-blend-mode: lighten;
-}
-
-#line-i-1 {
-  transform-origin: 30em 8em;
-}
-
-/* Fireworks */
-
-.fireworks {
+button {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 4rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 5px black;
+  background-color: white;
 }
