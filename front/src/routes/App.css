@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Shohre";
+    src: url("fonts/shohre.ttf") format("truetype");
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    cursor: pointer;
+}
