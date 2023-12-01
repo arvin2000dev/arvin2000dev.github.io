@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<img id="myGif" src="cat.png" onclick="playPause()" class="center">
+
+<script>
+    var gif = document.getElementById('myGif');
+    gif.onclick = playPause;
+
+    var counter = 0;
+
+    function playPause() {
+        var src = gif.getAttribute('src');
+        if(src.indexOf('.gif') > -1) {
+            gif.setAttribute('src', src.slice(0, -4) + '.png');
+        } else {
+            gif.setAttribute('src', src.slice(0, -4) + '.gif');
+            if(counter < 3) {
+                setTimeout(playPause, 2200)
+            }
+            else {
+                setTimeout(playPause, 4300)
+            }
+            counter++;
+            
+        }
+    }
+</script>
+
+</body>
+</html>
